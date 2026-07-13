@@ -649,3 +649,29 @@ a {
     padding: 28px 22px;
   }
 }
+
+
+/* ===== MEJORAS V2: accesibilidad, movimiento y móvil ===== */
+html { scroll-padding-top: 96px; }
+.skip-link { position: fixed; top: 12px; left: 12px; z-index: 1000; padding: 10px 14px; border-radius: 8px; color: #fff; background: var(--navy); transform: translateY(-160%); transition: transform 180ms ease; }
+.skip-link:focus { transform: translateY(0); }
+.topnav a { position: relative; }
+.topnav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 180ms ease; }
+.topnav a:hover::after, .topnav a:focus-visible::after { transform: scaleX(1); }
+.button:focus-visible, .topnav a:focus-visible, .document-actions a:focus-visible, .contact-links a:focus-visible { outline: 3px solid rgba(215,192,138,.72); outline-offset: 4px; }
+.emblem-ring { animation: emblem-breathe 5s ease-in-out infinite; }
+.impact-card { transition: transform 180ms ease, box-shadow 180ms ease; }
+.impact-card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(13,35,64,.08); }
+.contact-links a { transition: border-color 180ms ease, background 180ms ease; }
+.contact-links a:hover { border-color: rgba(215,192,138,.55); background: rgba(255,255,255,.07); }
+.contact-links strong { overflow-wrap: anywhere; }
+.reveal { animation: reveal-up 700ms cubic-bezier(.22,.61,.36,1) both; }
+.section-profile { animation-delay: 80ms; }
+.section-impact { animation-delay: 140ms; }
+#documentos { animation-delay: 200ms; }
+#contacto { animation-delay: 260ms; }
+@keyframes reveal-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes emblem-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.015); } }
+@media (max-width: 900px) { html { scroll-padding-top: 24px; } .topbar { min-height: 76px; padding: 12px 20px; } .brand-mark { width: 48px; height: 48px; } .profile-copy { padding-right: 0; } }
+@media (max-width: 560px) { .brand-subtitle { display:none; } .hero { padding: 48px 22px; } .hero h1 { font-size: clamp(3rem,17vw,4rem); } .hero-role { font-size: .98rem; } .hero-positioning { font-size: .83rem; line-height: 1.55; } .section { padding: 46px 22px; } .section-heading { align-items:flex-start; } .value-card, .contact-panel { padding: 26px 22px; } .document-card { min-height:auto; } .contact-panel { gap:24px; } .footer-brand span { font-size:.62rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }

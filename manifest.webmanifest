@@ -1,0 +1,12 @@
+{
+  "name": "Salvador Rivera Gutiérrez | SR Executive",
+  "short_name": "SR Executive",
+  "description": "Executive Resume y perfil profesional de Salvador Rivera Gutiérrez.",
+  "start_url": "/sr-executive/",
+  "scope": "/sr-executive/",
+  "display": "standalone",
+  "background_color": "#071728",
+  "theme_color": "#071728",
+  "lang": "es-MX",
+  "icons": [{"src":"assets/app-icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}
