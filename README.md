@@ -45,3 +45,21 @@ Después de publicar, la URL definitiva servirá para crear el código QR de la 
 
 El QR se genera únicamente después de obtener la URL pública definitiva.
 No conviene generar el QR antes, porque tendría que cambiarse si cambia la dirección web.
+
+Actualizar Executive Resume
+
+1. Abrir carpeta documents
+
+2. Sustituir executive-resume.pdf
+
+3. Guardar
+
+4. git add .
+
+5. git commit -m "Update Executive Resume"
+
+6. git push
+
+7. Esperar 1 minuto
+
+Listo.
